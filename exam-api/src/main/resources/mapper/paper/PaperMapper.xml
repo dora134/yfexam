@@ -47,16 +47,14 @@
                 <if test="query.userId!=null and query.userId!=''">
                     AND pp.user_id=#{query.userId}
                 </if>
-
                 <if test="query.departId!=null and query.departId!=''">
                     AND pp.depart_id=#{query.departId}
                 </if>
-
                 <if test="query.state!=null">
                     AND pp.state=#{query.state}
                 </if>
                 <if test="query.realName!=null and query.realName!=''">
-                    AND uc.real_name  LIKE '%${query.realName}%'
+                    AND uc.real_name  LIKE CONCAT('%',#{query.realName},'%')
                 </if>
             </if>
         </where>

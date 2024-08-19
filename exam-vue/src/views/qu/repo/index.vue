@@ -14,6 +14,12 @@
     <template #data-columns>
 
       <el-table-column
+        label="题库ID"
+        prop="id"
+        align="center"
+      />
+
+      <el-table-column
         label="题库名称"
       >
 
